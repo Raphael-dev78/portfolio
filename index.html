@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Raphael Dekeyser | Portfolio Développeur EPITECH - Cybersécurité & Web</title>
+    <meta name="description" content="Portfolio professionnel de Raphael Dekeyser, étudiant développeur à EPITECH spécialisé en cybersécurité et développement web. Découvrez mes projets et compétences.">
+    <meta name="keywords" content="développeur, EPITECH, cybersécurité, portfolio, Raphael Dekeyser, pentesting, web">
+    <meta name="author" content="Raphael Dekeyser">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Raphael Dekeyser | Portfolio Développeur EPITECH">
+    <meta property="og:description" content="Découvrez mes projets en développement et cybersécurité">
+    <meta property="og:image" content="assets/photo.jpg">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Raphael Dekeyser | Portfolio Développeur">
+    <meta name="twitter:description" content="Portfolio professionnel - Projets & Compétences">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+    <header class="header" role="banner">
+        <nav class="header__nav" role="navigation" aria-label="Navigation principale">
+            <div class="header__logo" aria-label="Logo du portfolio">MonPortfolio</div>
+            <ul class="header__menu" role="list">
+                <li class="header__item">
+                    <a href="#about" class="header__link">À propos</a>
+                </li>
+                <li class="header__item">
+                    <a href="#projects" class="header__link">Projets</a>
+                </li>
+                <li class="header__item">
+                    <a href="#evolution" class="header__link">Progression</a>
+                </li>
+                <li class="header__item">
+                    <a href="#experiences" class="header__link">Expériences</a>
+                </li>
+                <li class="header__item">
+                    <a href="#contact" class="header__link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        
+        <section id="about" class="hero" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <img src="assets/photo.jpg" alt="" class="hero__photo" width="150" height="150">
+                <h1 id="hero-title" class="hero__title">Bonjour, je suis Raphael Dekeyser</h1>
+                <p class="hero__catchphrase">"Curieux par nature, rigoureux par nécessité : je développe des solutions avec une approche centrée sur la sécurité!"</p>
+                <a href="assets/cv.pdf" class="btn btn--primary" download aria-label="Télécharger mon CV au format PDF">
+                    Télécharger mon CV (PDF)
+                </a>
+            </div>
+        </section>
+
+        <section id="projects" class="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title" class="projects__title">Mes Réalisations</h2>
+            <div class="projects__grid" role="list">
+
+                <article class="project-card" role="listitem">
+                    <h3 class="project-card__title">Hack & Juice - Pentesting & Sécurité</h3>
+                    <div class="project-card__content">
+                        <p>
+                            <strong>L'Objectif :</strong> Mener seul un audit de sécurité complet (Pentest) pendant 3 semaines sur l'application web vulnérable OWASP Juice Shop. Le but était d'identifier, exploiter et documenter individuellement un maximum de vulnérabilités issues du Top 10 d'OWASP.
+                        </p>
+                        <p>
+                            <strong>Le Défi Technique :</strong> Réaliser ce projet en autonomie totale a été un défi de taille. Sans coéquipier pour brainstormer, j'ai dû explorer moi-même un large spectre de failles (XSS, Injections, Brute Force) et gérer seul l'intégralité de la rédaction des rapports techniques (Write-ups) ainsi que la préparation de la soutenance orale.
+                        </p>
+                        <p>
+                            <strong>Compétences développées :</strong> Ce projet a grandement renforcé mon autonomie, ma persévérance et ma rigueur méthodologique. J'ai appris à chercher l'information de manière efficace dans les documentations et à structurer mon temps sur 3 semaines pour livrer un travail complet et soigné.
+                        </p>
+                        <p>
+                            <strong>Regard critique :</strong> En travaillant seul, j'ai manqué de recul sur ma gestion des priorités. J'ai tenté de résoudre les challenges les plus complexes (niveaux 4 à 6 étoiles), mais sans grand succès. J'aurais pu faire mieux en consolidant d'abord mes acquis sur les niveaux intermédiaires plutôt que de m'obstiner sur des blocages trop élevés. C'est une excellente leçon pour mes futurs projets.
+                        </p>
+                    </div>
+                    <span class="project-card__tag" aria-label="Catégorie du projet">Cybersécurité & Autonomie</span>
+                </article>
+                <article class="project-card" role="listitem">
+                     <h3 class="project-card__title">TARDIS - Prédiction de retards (Machine Learning)</h3>
+                      <div class="project-card__content">
+                  <p>
+                    <strong>L'Objectif :</strong> Développer un système prédictif pour anticiper les retards de trains de la SNCF en analysant des données historiques. L'enjeu était de nettoyer un jeu de données brut, mener une analyse exploratoire approfondie et entraîner un modèle de Machine Learning restitué via une interface interactive Streamlit.
+                  </p>
+                 <p>
+                    <strong>Le Défi Technique :</strong> Ce projet a marqué une rupture avec mes habitudes de développement en introduisant l'utilisation des Jupyter Notebooks. Le plus difficile a été la phase de préparation des données (Data Cleaning) : gérer les valeurs manquantes et les incohérences, puis réaliser un "Feature Engineering" pertinent pour que le modèle Scikit-learn puisse faire des prédictions fiables.
+                   </p>
+                 <p>
+                    <strong>Compétences développées :</strong> J'ai acquis de solides bases en Data Science et en Intelligence Artificielle sous Python (Pandas, NumPy, Scikit-learn). J'ai également appris à valoriser ces données graphiquement (Matplotlib, Seaborn) et à concevoir rapidement un produit fonctionnel et interactif pour l'utilisateur final grâce à Streamlit.
+                  </p>
+                  <p>
+                     <strong>Regard critique :</strong>L'approche par Notebook m'a parfois fait perdre en structure de code au début. De plus, avec le recul, j'ai fait de mauvais choix de représentations graphiques pour certaines données lors de l'analyse exploratoire, ce qui a rendu la lecture moins fluide. J'aurais dû passer plus de temps à sélectionner des visualisations plus pertinentes et à modulariser mon code plus tôt.
+        </p>
+                 </p>
+          </div>
+    <span class="project-card__tag" aria-label="Catégorie du projet">Data Science & IA</span>
+</article>
+            </div>
+        </section>
+
+        <section id="evolution" class="evolution" aria-labelledby="evolution-title">
+            <h2 id="evolution-title" class="evolution__title">Ce que j'ai appris & Améliorations</h2>
+            <div class="evolution__content">
+                <p>
+                    <strong>Ma progression technique :</strong> Depuis mon entrée à EPITECH, j'ai considérablement développé ma capacité à résoudre des problèmes complexes de manière autonome. Mes premiers projets nécessitaient beaucoup de recherches et de tâtonnements, mais au fil du temps, j'ai construit une méthodologie solide : découpage du problème en sous-tâches, recherche documentaire ciblée, tests itératifs et débogage systématique.
+                </p>
+                <p>
+                    <strong>Stratégies d'apprentissage :</strong> J'ai appris à privilégier la documentation officielle et les ressources de qualité plutôt que de chercher des solutions toutes faites. Cette approche prend plus de temps au début, mais elle m'a permis de développer une compréhension approfondie des technologies que j'utilise. Je pratique également la "veille technologique" en suivant des blogs spécialisés en cybersécurité et développement web.
+                </p>
+                <p>
+                    <strong>Gestion des difficultés :</strong> Face aux blocages techniques, j'ai développé une meilleure résilience. Au lieu de m'obstiner pendant des heures sur un problème, j'ai appris à faire des pauses, reformuler le problème différemment, ou demander de l'aide de manière structurée en présentant clairement ce que j'ai déjà tenté.
+                </p>
+            </div>
+        </section>
+
+        <section id="experiences" class="experiences" aria-labelledby="experiences-title">
+            <h2 id="experiences-title" class="experiences__title">Expériences & Activités</h2>
+            <div class="experiences__list" role="list">
+                
+                <article class="experience-item" role="listitem">
+                    <h3 class="experience-item__name">Projets de la Piscine EPITECH</h3>
+                    <p class="experience-item__details">
+                        Durant ma piscine (4 semaines intensives), j'ai réalisé plus de 20 mini-projets en C et Shell, couvrant les bases de la programmation, les algorithmes et la gestion de la mémoire. Cette période intense m'a appris la rigueur du code, le respect des normes de coding style, et l'importance des tests unitaires. C'était éprouvant mais formateur : j'ai compris que la qualité du code prime sur la vitesse d'exécution.
+                    </p>
+                </article>
+
+                <article class="experience-item" role="listitem">
+                    <h3 class="experience-item__name">Veille Technologique & Autoformation</h3>
+                    <p class="experience-item__details">
+                        En dehors des cours, je maintiens une veille active sur les nouvelles vulnérabilités (CVE) et les techniques d'attaque/défense en cybersécurité. J'ai suivi plusieurs cours en ligne (TryHackMe, HackTheBox) pour approfondir mes connaissances en pentesting web et réseau. Cette démarche proactive complète parfaitement ma formation à EPITECH et me permet de rester à jour dans un domaine qui évolue constamment.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title" class="contact__title">Me Contacter</h2>
+            <p class="contact__info">
+                <span>Email : <a href="mailto:raphael.dekeyser@epitech.eu" style="color: white; text-decoration: underline;">raphael.dekeyser@epitech.eu</a></span> | 
+                <span>Téléphone : <a href="tel:+33768272642" style="color: white; text-decoration: underline;">07 68 27 26 42</a></span>
+            </p>
+            
+            <form class="contact-form" novalidate aria-label="Formulaire de contact">
+                <div class="contact-form__group">
+                    <label for="name" class="contact-form__label">Nom <span aria-label="requis">*</span></label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="contact-form__input" 
+                        required 
+                        autocomplete="name"
+                        aria-required="true"
+                        aria-describedby="name-error"
+                    >
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="email" class="contact-form__label">Email <span aria-label="requis">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="contact-form__input" 
+                        required 
+                        autocomplete="email"
+                        aria-required="true"
+                        aria-describedby="email-error"
+                    >
+                </div>
+
+                <div class="contact-form__group">
+                    <label for="message" class="contact-form__label">Message <span aria-label="requis">*</span></label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        class="contact-form__input contact-form__input--textarea" 
+                        required
+                        aria-required="true"
+                        aria-describedby="message-error"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn--submit">
+                    Envoyer
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <p class="footer__text">
+            &copy; 2026 - Portfolio créé par Raphael Dekeyser dans le cadre du cursus EPITECH.
+        </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

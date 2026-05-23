@@ -1,15 +1,9 @@
-/* ============================================
-   PORTFOLIO EPITECH - JAVASCRIPT INTERACTIF
-   ============================================ */
-
-// ===== CONFIGURATION & CONSTANTES =====
 const CONFIG = {
     scrollThreshold: 100,
     animationOffset: 0.15,
     emailRegex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 };
 
-// ===== DOM ELEMENTS =====
 const DOM = {
     header: document.querySelector('.header'),
     burger: null, // Sera créé dynamiquement
@@ -25,7 +19,6 @@ const DOM = {
     submitButton: document.querySelector('.btn--submit')
 };
 
-// ===== INITIALISATION AU CHARGEMENT =====
 document.addEventListener('DOMContentLoaded', () => {
     initBurgerMenu();
     initSmoothScroll();
@@ -35,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('✅ Portfolio initialisé avec succès !');
 });
 
-// ===== MENU BURGER (MOBILE) =====
 function initBurgerMenu() {
     // Créer le bouton burger
     const burger = document.createElement('button');
@@ -43,23 +35,19 @@ function initBurgerMenu() {
     burger.setAttribute('aria-label', 'Ouvrir le menu');
     burger.setAttribute('aria-expanded', 'false');
     
-    // Créer les 3 lignes du burger
     for (let i = 0; i < 3; i++) {
         const line = document.createElement('span');
         line.className = 'header__burger-line';
         burger.appendChild(line);
     }
     
-    // Insérer le burger dans le header
     const nav = document.querySelector('.header__nav');
     const logo = document.querySelector('.header__logo');
     nav.insertBefore(burger, DOM.menu);
     DOM.burger = burger;
     
-    // Gérer le clic sur le burger
     burger.addEventListener('click', toggleMenu);
     
-    // Fermer le menu au clic sur un lien
     DOM.navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 768) {
@@ -68,7 +56,6 @@ function initBurgerMenu() {
         });
     });
     
-    // Fermer le menu au redimensionnement
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
@@ -94,7 +81,6 @@ function closeMenu() {
     DOM.burger.setAttribute('aria-label', 'Ouvrir le menu');
 }
 
-// ===== SMOOTH SCROLL =====
 function initSmoothScroll() {
     DOM.navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -124,7 +110,6 @@ function initSmoothScroll() {
     });
 }
 
-// ===== ANIMATIONS AU SCROLL (INTERSECTION OBSERVER) =====
 function initScrollAnimations() {
     const observerOptions = {
         threshold: CONFIG.animationOffset,
@@ -135,25 +120,20 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
-                // Optionnel : ne plus observer après l'animation
-                // observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
-    
-    // Observer les cartes de projets
+
     DOM.projectCards.forEach(card => {
         observer.observe(card);
     });
-    
-    // Observer les items d'expérience
+
     const experienceItems = document.querySelectorAll('.experience-item');
     experienceItems.forEach(item => {
         observer.observe(item);
     });
 }
 
-// ===== CACHER/MONTRER HEADER AU SCROLL =====
 function initScrollHeaderHide() {
     let lastScroll = 0;
     let ticking = false;

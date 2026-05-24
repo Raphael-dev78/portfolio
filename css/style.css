@@ -657,6 +657,186 @@ body {
     white-space: nowrap;
     border-width: 0;
 }
+.skills {
+    max-width: 1200px;
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-md);
+}
+ 
+.skills__title {
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+    font-family: var(--font-mono);
+}
+ 
+.skills__title::before {
+    content: '// ';
+    color: var(--color-primary);
+    opacity: 0.7;
+}
+ 
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+ 
+.skills__category {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    transition: border-color var(--transition-normal);
+}
+ 
+.skills__category:hover {
+    border-color: rgba(232, 255, 107, 0.3);
+}
+ 
+.skills__category-title {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid var(--color-border);
+}
+ 
+/* --- BLOCK: SKILL-BAR --- */
+ 
+.skill-bar {
+    margin-bottom: 1.2rem;
+}
+ 
+.skill-bar:last-child {
+    margin-bottom: 0;
+}
+ 
+.skill-bar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+ 
+.skill-bar__name {
+    font-size: 0.88rem;
+    color: var(--color-text);
+    font-family: var(--font-mono);
+}
+ 
+.skill-bar__level {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+ 
+/* Badge niveau (langues) */
+.skill-bar__level--badge {
+    background: rgba(232, 255, 107, 0.1);
+    border: 1px solid rgba(232, 255, 107, 0.35);
+    color: var(--color-primary);
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+}
+ 
+/* Piste de la barre */
+.skill-bar__track {
+    height: 14px;
+    background: #1e1e1e;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    position: relative;
+}
+ 
+/* Segments style jeu vidéo */
+.skill-bar__track::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 9%,
+        rgba(0, 0, 0, 0.3) 9%,
+        rgba(0, 0, 0, 0.3) 10%
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+ 
+/* Remplissage coloré */
+.skill-bar__fill {
+    height: 100%;
+    width: 0;
+    border-radius: 6px;
+    position: relative;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Couleur par défaut - sera remplacée par JS via la classe de niveau */
+    background: linear-gradient(90deg, #facc15, #e8ff6b);
+    box-shadow: 0 0 10px rgba(232, 255, 107, 0.3);
+}
+
+/* Niveau avancé >= 75% : vert */
+.skill-bar__fill--high {
+    background: linear-gradient(90deg, #4ade80, #e8ff6b) !important;
+    box-shadow: 0 0 12px rgba(74, 222, 128, 0.6) !important;
+}
+
+/* Niveau intermédiaire 55%-74% : jaune */
+.skill-bar__fill--mid {
+    background: linear-gradient(90deg, #facc15, #e8ff6b) !important;
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.5) !important;
+}
+
+/* Niveau débutant <= 54% : orange */
+.skill-bar__fill--low {
+    background: linear-gradient(90deg, #fb923c, #facc15) !important;
+    box-shadow: 0 0 12px rgba(251, 146, 60, 0.5) !important;
+}
+
+/* Reflet brillant */
+.skill-bar__fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px 6px 0 0;
+}
+
+/* Pulse au bout de la barre */
+.skill-bar__fill::before {
+    content: '';
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    opacity: 0;
+    animation: pulse-bar 1.5s ease-in-out infinite;
+}
+
+.skill-bar__fill.is-animated::before {
+    opacity: 1;
+}
+ 
+@keyframes pulse-bar {
+    0%, 100% { opacity: 0.6; transform: translateY(-50%) scaleY(1); }
+    50%       { opacity: 1;   transform: translateY(-50%) scaleY(1.3); }
+}
 
 @media (max-width: 768px) {
     .header__nav {

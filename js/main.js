@@ -205,7 +205,6 @@ function showFormSuccess() {
     setTimeout(() => successMessage.remove(), 5000);
 }
 
-// ===== SKILL BARS =====
 function initSkillBars() {
     const skillBars = document.querySelectorAll('.skill-bar__fill');
 

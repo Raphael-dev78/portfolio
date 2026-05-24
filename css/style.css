@@ -706,7 +706,6 @@ body {
     border-bottom: 1px solid var(--color-border);
 }
  
-/* --- BLOCK: SKILL-BAR --- */
  
 .skill-bar {
     margin-bottom: 1.2rem;
@@ -736,7 +735,6 @@ body {
     color: var(--color-primary);
 }
  
-/* Badge niveau (langues) */
 .skill-bar__level--badge {
     background: rgba(232, 255, 107, 0.1);
     border: 1px solid rgba(232, 255, 107, 0.35);
@@ -746,7 +744,6 @@ body {
     font-size: 0.75rem;
 }
  
-/* Piste de la barre */
 .skill-bar__track {
     height: 14px;
     background: #1e1e1e;
@@ -756,7 +753,6 @@ body {
     position: relative;
 }
  
-/* Segments style jeu vidéo */
 .skill-bar__track::after {
     content: '';
     position: absolute;
@@ -772,7 +768,6 @@ body {
     pointer-events: none;
 }
  
-/* Remplissage coloré */
 .skill-bar__fill {
     height: 100%;
     width: 0;
@@ -784,25 +779,21 @@ body {
     box-shadow: 0 0 10px rgba(232, 255, 107, 0.3);
 }
 
-/* Niveau avancé >= 75% : vert */
 .skill-bar__fill--high {
     background: linear-gradient(90deg, #4ade80, #e8ff6b) !important;
     box-shadow: 0 0 12px rgba(74, 222, 128, 0.6) !important;
 }
 
-/* Niveau intermédiaire 55%-74% : jaune */
 .skill-bar__fill--mid {
     background: linear-gradient(90deg, #facc15, #e8ff6b) !important;
     box-shadow: 0 0 12px rgba(250, 204, 21, 0.5) !important;
 }
 
-/* Niveau débutant <= 54% : orange */
 .skill-bar__fill--low {
     background: linear-gradient(90deg, #fb923c, #facc15) !important;
     box-shadow: 0 0 12px rgba(251, 146, 60, 0.5) !important;
 }
 
-/* Reflet brillant */
 .skill-bar__fill::after {
     content: '';
     position: absolute;
@@ -814,7 +805,6 @@ body {
     border-radius: 6px 6px 0 0;
 }
 
-/* Pulse au bout de la barre */
 .skill-bar__fill::before {
     content: '';
     position: absolute;
